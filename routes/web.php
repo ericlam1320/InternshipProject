@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
+Route::get('', function(){ return view('welcome'); });
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix'=>'sinh-vien'], function(){
 	Route::get('', 'SinhVienController@getIndex');
@@ -21,3 +25,5 @@ Route::group(['prefix'=>'sinh-vien'], function(){
 Route::group(['prefix'=>'giang-vien'], function(){
 	Route::get('', 'GiangVienController@getIndex');
 });
+
+
