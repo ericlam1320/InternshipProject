@@ -1,8 +1,8 @@
 @extends('layout.master')
 
-@section('menu-yeucau','menu-top-active')
+@section('menu-quanly','menu-top-active')
 
-@section ('title','Yêu Cầu')
+@section ('title','Quản Lý')
 
 @section('content')
 
@@ -11,66 +11,82 @@
 
   <div class="row pad-botm">
     <div class="col-md-12">
-      <h4 class="header-line">Yêu cầu</h4>
+      <h4 class="header-line">Thêm Lớp Học</h4>
     </div>
   </div>
 
-  <div class="row">
-   <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-info back-widget-set text-center">
-      <i class="fa fa-user fa-5x"></i>
-      <h3>Vương Anh Kho</h3>
-    </div>
-  </div>
+<div class="row">
+             <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-info back-widget-set text-center">
+                <i class="fa fa-user fa-5x"></i>
+                <h3>Bùi Nhật Bằng</h3>
+                Họ & tên
+              </div>
+            </div>
 
-  <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-success back-widget-set text-center">
-      <i class="fa fa-bookmark fa-5x"></i>
-      <h3>DH51400553</h3>
-    </div>
-  </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-success back-widget-set text-center">
+                <i class="fa fa-bookmark fa-5x"></i>
+                <h3>D14-TH02</h3>
+                Lớp phụ trách
+              </div>
+            </div>
 
-  <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-warning back-widget-set text-center">
-      <i class="fa fa-mortar-board fa-5x"></i>
-      <h3>D14-TH02</h3>
-    </div>
-  </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-warning back-widget-set text-center">
+                <i class="fa fa-comment-o fa-5x"></i>
+                <h3>50</h3>
+                Số yêu cầu
+              </div>
+            </div>
 
-  <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-danger back-widget-set text-center">
-      <i class="fa fa-users fa-5x"></i>
-      <h3>30+ </h3>
-    </div>
-  </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-danger back-widget-set text-center">
+                <i class="fa fa-users fa-5x"></i>
+                <h3>3</h3>
+                Số nhóm phụ trách
+              </div>
+            </div>
 
 
+                        
 
   </div>              
   <div class="col-md-6 col-sm-6 col-xs-12">
    <div class="panel panel-info">
     <div class="panel-heading">
-      Yêu Cầu
+      Form Thêm Lớp
+        @if(count($errors) > 0)                       
+            <div class="alert alert-danger">@foreach($errors->all() as $err){{$err}}<br>@endforeach</div>
+        @endif
    </div>
-   <div class="panel-body">
-    <form role="form">
+   <div class="panel-body" >
+    <form role="form" method="POST" action="giang-vien/quan-ly-lop/them">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group">
-        <label>Họ & Tên</label>
-        <input class="form-control" type="text" />
+        <label>ID lớp</label>
+        <input class="form-control" type="text" name="idlop" />
         <p class="help-block"></p>
       </div>
       <div class="form-group">
-        <label>Email</label>
-        <input class="form-control" type="text" />
+        <label>Tên lớp</label>
+        <input class="form-control" type="text" name="tenlop" />
         <p class="help-block"></p>
       </div>
       <div class="form-group">
-        <label>Nội dung</label>
-        <textarea class="form-control" rows="3"></textarea>
+        <label>Số lượng sinh viên</label>
+        <input class="form-control" type="text" name="soluongsv" />
+        <p class="help-block"></p>
       </div>
-
-
-      <button type="submit" class="btn btn-info">Gửi yêu cầu</button>
+      <div class="form-group">
+        <label>Chọn giảng viên</label>
+        <select class="form-control" name="giangvien">
+            @foreach($giangvien as $gv)
+            <option value="{{$gv->id}}">{{$gv->HoTen}}</option>
+            @endforeach
+        </select>
+      </div>
+      <button type="submit" class="btn btn-info">Thêm</button>
 
     </form>
   </div>
@@ -91,9 +107,9 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Tên</th>
-                                            <th>Mã Số</th>
-                                            <th>Trạng thái</th>
+                                            <th>Tên Lớp</th>
+                                            <th>Số lượng SV</th>
+                                            <th>Tên GV</th>
                                         </tr>
                                     </thead>
                                     <tbody>

@@ -15,34 +15,38 @@
     </div>
   </div>
 
-  <div class="row">
-   <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-info back-widget-set text-center">
-      <i class="fa fa-user fa-5x"></i>
-      <h3>Vương Anh Kho</h3>
-    </div>
-  </div>
+<div class="row">
+             <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-info back-widget-set text-center">
+                <i class="fa fa-user fa-5x"></i>
+                <h3>Bùi Nhật Bằng</h3>
+                Họ & tên
+              </div>
+            </div>
 
-  <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-success back-widget-set text-center">
-      <i class="fa fa-bookmark fa-5x"></i>
-      <h3>DH51400553</h3>
-    </div>
-  </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-success back-widget-set text-center">
+                <i class="fa fa-bookmark fa-5x"></i>
+                <h3>D14-TH02</h3>
+                Lớp phụ trách
+              </div>
+            </div>
 
-  <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-warning back-widget-set text-center">
-      <i class="fa fa-mortar-board fa-5x"></i>
-      <h3>D14-TH02</h3>
-    </div>
-  </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-warning back-widget-set text-center">
+                <i class="fa fa-comment-o fa-5x"></i>
+                <h3>50</h3>
+                Số yêu cầu
+              </div>
+            </div>
 
-  <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-danger back-widget-set text-center">
-      <i class="fa fa-users fa-5x"></i>
-      <h3>30+ </h3>
-    </div>
-  </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-danger back-widget-set text-center">
+                <i class="fa fa-users fa-5x"></i>
+                <h3>3</h3>
+                Số nhóm phụ trách
+              </div>
+            </div>
 
 
 

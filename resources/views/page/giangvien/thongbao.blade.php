@@ -15,43 +15,85 @@
     </div>
   </div>
 
-  <div class="row">
-   <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-info back-widget-set text-center">
-      <i class="fa fa-user fa-5x"></i>
-      <h3>Vương Anh Kho</h3>
-    </div>
-  </div>
-
-  <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-success back-widget-set text-center">
-      <i class="fa fa-bookmark fa-5x"></i>
-      <h3>DH51400553</h3>
-    </div>
-  </div>
-
-  <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-warning back-widget-set text-center">
-      <i class="fa fa-mortar-board fa-5x"></i>
-      <h3>D14-TH02</h3>
-    </div>
-  </div>
-
-  <div class="col-md-3 col-sm-3 col-xs-6">
-    <div class="alert alert-danger back-widget-set text-center">
-      <i class="fa fa-users fa-5x"></i>
-      <h3>30+ </h3>
-    </div>
-  </div>
-
-
-
-  </div>              
 <div class="row">
-                <div class="col-md-12">
+             <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-info back-widget-set text-center">
+                <i class="fa fa-user fa-5x"></i>
+                <h3>Bùi Nhật Bằng</h3>
+                Họ & tên
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-success back-widget-set text-center">
+                <i class="fa fa-bookmark fa-5x"></i>
+                <h3>D14-TH02</h3>
+                Lớp phụ trách
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-warning back-widget-set text-center">
+                <i class="fa fa-comment-o fa-5x"></i>
+                <h3>50</h3>
+                Số yêu cầu
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="alert alert-danger back-widget-set text-center">
+                <i class="fa fa-users fa-5x"></i>
+                <h3>3</h3>
+                Số nhóm phụ trách
+              </div>
+            </div>
+</div>            
+
+            <div class="row">
+                
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-info">
+
+                        <div class="panel-heading">
+                          Form Thông báo
+                        </div>
+
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>Họ & Tên</label>
+                                    <input class="form-control" type="text" />
+                                    <p class="help-block"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control" type="text" />
+                                    <p class="help-block"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nội dung</label>
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Chọn nhóm</label>
+                                    <select class="form-control">
+                                        <option>Nhóm 1</option>
+                                        <option>Nhóm 2</option>
+                                        <option>Nhóm 3</option>
+                                        <option>Nhóm 4</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-info">Gửi thông báo</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Bảng hiển thị thông báo 
+                            Thông báo gần đây
                         </div>
                         <div class="panel-body">
                             <div class="panel-group" id="accordion">
@@ -94,7 +136,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
 
 

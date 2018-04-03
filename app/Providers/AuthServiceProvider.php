@@ -25,6 +25,16 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('giang_vien', function($user){
+            if($user->type === 1){
+                return true;
+            }
+        });
+
+        Gate::define('sinh_vien', function($user){
+           if($user->type === 2){
+                return true;
+            }
+        });
     }
 }

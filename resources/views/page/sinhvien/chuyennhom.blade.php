@@ -1,19 +1,19 @@
 @extends('layout.master')
 
-@section('menu-yeucau','menu-top-active')
+@section('menu-quanly','menu-top-active')
 
-@section ('title','Yêu Cầu')
+@section ('title','Thông báo')
 
 @section('content')
 
 <div class="content-wrapper">
  <div class="container">
 
-  <div class="row pad-botm">
+  <!-- <div class="row pad-botm">
     <div class="col-md-12">
-      <h4 class="header-line">Yêu cầu</h4>
+      <h4 class="header-line">Quản Lý Nhóm</h4>
     </div>
-  </div>
+  </div> -->
 
   <div class="row">
    <div class="col-md-3 col-sm-3 col-xs-6">
@@ -47,10 +47,18 @@
 
 
   </div>              
-  <div class="col-md-6 col-sm-6 col-xs-12">
+
+
+
+  <div class="row pad-botm">
+            <div class="col-md-12">
+                <h4 class="header-line">Chuyển nhóm</h4>
+            </div>
+            
+              <div class="col-md-6 col-sm-6 col-xs-12">
    <div class="panel panel-info">
     <div class="panel-heading">
-      Yêu Cầu
+      Form Chuyển nhóm
    </div>
    <div class="panel-body">
     <form role="form">
@@ -60,15 +68,28 @@
         <p class="help-block"></p>
       </div>
       <div class="form-group">
-        <label>Email</label>
+        <label>Lớp</label>
         <input class="form-control" type="text" />
         <p class="help-block"></p>
       </div>
       <div class="form-group">
-        <label>Nội dung</label>
+        <label>Mã số SV</label>
+        <input class="form-control" type="text" />
+        <p class="help-block"></p>
+      </div>
+      <div class="form-group">
+          <label>Chọn Nhóm</label>
+          <select class="form-control">
+              <option>Nhóm 1</option>
+              <option>Nhóm 2</option>
+              <option>Nhóm 3</option>
+              <option>Nhóm 4</option>
+          </select>
+      </div>
+      <div class="form-group">
+        <label>Lý do chuyển nhóm</label>
         <textarea class="form-control" rows="3"></textarea>
       </div>
-
 
       <button type="submit" class="btn btn-info">Gửi yêu cầu</button>
 
@@ -82,7 +103,7 @@
                     <div class="panel panel-default">
                        
                         <div class="panel-heading">
-                            Yêu cầu gần đây
+                           Danh Sách Nhóm
                         </div>
                         
                         <div class="panel-body">
@@ -93,7 +114,7 @@
                                             <th>#</th>
                                             <th>Tên</th>
                                             <th>Mã Số</th>
-                                            <th>Trạng thái</th>
+                                            <th>Lớp</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -101,25 +122,31 @@
                                             <td>1</td>
                                             <td>Thi Trường Minh</td>
                                             <td>DH51400704</td>
-                                            <td>Đã duyệt</td>
+                                            <td>D14-TH02</td>
                                         </tr>
                                         <tr class="info">
                                             <td>2</td>
                                             <td>Vương Anh Kho</td>
                                             <td>DH51400553</td>
-                                            <td>Chưa duyệt</td>
+                                            <td>D14-TH02</td>
                                         </tr>
                                         <tr class="warning">
                                             <td>3</td>
                                             <td>Nguyễn Chung Tú</td>
                                             <td>DH51400553</td>
-                                            <td>Đã duyệt</td>
+                                            <td>D14-TH02</td>
                                         </tr>
                                         <tr class="danger">
                                             <td>4</td>
                                             <td>Thái Kim Thanh</td>
                                             <td>DH51400553</td>
-                                            <td>Chưa duyệt</td>
+                                            <td>D14-TH02</td>
+                                        </tr>
+                                        <tr class="danger">
+                                            <td>5</td>
+                                            <td>Huỳnh Trí Minh</td>
+                                            <td>DH51400553</td>
+                                            <td>D14-TH02</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -128,6 +155,9 @@
                     </div>
                     <!--  end  Context Classes  -->
                 </div>
+  </div>
+      
+</div>
 
 </div>
 </div>

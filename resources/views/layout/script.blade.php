@@ -14,9 +14,10 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
     <link href="css/font-awesome.css" rel="stylesheet" />
+
     <!-- CUSTOM STYLE  -->
     <link href="css/style.css" rel="stylesheet" />
     <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    @yield('style')
 
 </head>

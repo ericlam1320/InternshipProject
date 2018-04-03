@@ -110,16 +110,13 @@ dt{
 
             </div>
                <div class="row">
-
                     <div class="col-md-6 col-sm-6">
                        <div class="panel panel-info">
                         <div class="panel-heading">
                           Tạo chủ đề
                         </div>
                         <div class="panel-body">
-
                           <form role="form">
-
                             <div class="form-group">
                               <label>Họ & Tên</label>
                               <input class="form-control" type="text" />
@@ -203,7 +200,7 @@ dt{
                           <p>Thực tập tốt nghiệp</p>
                       </div>
                       <div class="panel-footer">
-                          <a href="{{route('ChiTietThaoLuan')}}">Xem chi tiết</a>
+                          <a href="sinh-vien/chi-tiet-thao-luan/1">Xem chi tiết</a>
                       </div>
                   </div>
                 </div>
@@ -218,7 +215,7 @@ dt{
                           <p>Thực tập tốt nghiệp</p>
                       </div>
                       <div class="panel-footer">
-                          <a href="{{route('ChiTietThaoLuan')}}">Xem chi tiết</a>
+                          <a href="sinh-vien/chi-tiet-thao-luan/1">Xem chi tiết</a>
                       </div>
                   </div>
                 </div>
@@ -235,7 +232,7 @@ dt{
                           <p>Thực tập tốt nghiệp</p>
                       </div>
                       <div class="panel-footer">
-                          <a href="{{route('ChiTietThaoLuan')}}">Xem chi tiết</a>
+                          <a href="sinh-vien/chi-tiet-thao-luan/1">Xem chi tiết</a>
                       </div>
                   </div>
                 </div>
@@ -250,7 +247,7 @@ dt{
                             <p>Thực tập tốt nghiệp</p>
                         </div>
                         <div class="panel-footer">
-                            <a href="{{route('ChiTietThaoLuan')}}">Xem chi tiết</a>
+                            <a href="sinh-vien/chi-tiet-thao-luan/1">Xem chi tiết</a>
                         </div>
                     </div>
                   </div>
