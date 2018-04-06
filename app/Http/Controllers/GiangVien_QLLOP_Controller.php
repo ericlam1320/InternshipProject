@@ -10,7 +10,7 @@ use App\GiangVien;
 class GiangVien_QLLop_Controller extends Controller
 {
     public function getDanhSach(){
-        $lophoc = LopHoc::with('GiangVien')->orderBy('id', 'DESC')->get();
+        $lophoc = LopHoc::with('GiangVien')->orderBy('MaLop', 'DESC')->get();
         return view('page.giangvien.lop.danhsach' , compact('lophoc'));
     }
 
@@ -20,13 +20,13 @@ class GiangVien_QLLop_Controller extends Controller
     }
     public function postThem(Request $request){
         $this->validate($request,[
-            'idlop'=> 'required | unique:lophoc,id',
+            'malop'=> 'required | unique:lophoc,MaLop',
             'tenlop'=>'required | unique:lophoc,TenLop',
             'soluongsv'=>'required|numeric'
         ],
         [
-            'idlop.unique'=>'Mã lớp đã tồn tại',
-            'idlop.required'=>'ID lớp không được để trống',
+            'malop.unique'=>'Mã lớp đã tồn tại',
+            'malop.required'=>'Mã Lớp lớp không được để trống',
             'tenlop.required'=>'Tên lớp không được để trống',
             'tenlop.unique'=>'Tên lớp đã tồn tại',
             'soluongsv.required'=>'Số lượng sinh viên không được để trống',
@@ -35,7 +35,7 @@ class GiangVien_QLLop_Controller extends Controller
         ]);
 
         $lop = new LopHoc;
-        $lop->id = $request->idlop;
+        $lop->MaLop = $request->malop;
         $lop->TenLop = $request->tenlop;
         $lop->SoLuongSV = $request->soluongsv;
         $lop->MaGV = $request->giangvien;
@@ -45,31 +45,31 @@ class GiangVien_QLLop_Controller extends Controller
     }
 
     public function getXoa($id){
-        $lop = LopHoc::where('id', $id)->delete();
+        $lop = LopHoc::where('MaLop', $id)->delete();
         return redirect('giang-vien/quan-ly-lop/danh-sach')->with('success','Xoá lớp học thành công.');
     }
 
     public function getSua($id){
-        $lop = LopHoc::find($id);
+        $lop = LopHoc::where('MaLop', $id)->first();
         $giangvien = GiangVien::all();
         return view('page.giangvien.lop.sua', compact('lop', 'giangvien'));
     }
     public function postSua($id, Request $request){
         $this->validate($request,[
-            'idlop'=> 'required',
+            'malop'=> 'required',
             'tenlop'=>'required',
             'soluongsv'=>'required|numeric'
         ],
         [
-            'idlop.required'=>'ID lớp không được để trống',
+            'malop.required'=>'Mã lớp không được để trống',
             'tenlop.required'=>'Tên lớp không được để trống',
             'soluongsv.required'=>'Số lượng sinh viên không được để trống',
             'soluongsv.numeric'=>'Số lượng sinh viên phải là ký tự số'
             
         ]);
 
-        $lop = LopHoc::find($id);
-        $lop->id = $request->idlop;
+        $lop = LopHoc::where('MaLop', $id)->first();
+        $lop->MaLop = $request->malop;
         $lop->TenLop = $request->tenlop;
         $lop->SoLuongSV = $request->soluongsv;
         $lop->MaGV = $request->giangvien;

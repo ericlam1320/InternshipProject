@@ -11,11 +11,11 @@
 <div class="content-wrapper">
  <div class="container">
 
-  <div class="row pad-botm">
+  <!-- <div class="row pad-botm">
     <div class="col-md-12">
       <h4 class="header-line">Giảng Viên</h4>
     </div>
-  </div>
+  </div> -->
 
 <div class="row">
      <div class="col-md-3 col-sm-3 col-xs-6">
@@ -90,11 +90,11 @@
                                     @foreach ($lophoc as $lop)
                                     <tr class="odd gradeX">
                                         <td>{{$stt}}</td>
-                                        <td>{{$lop->id}}</td>
+                                        <td>{{$lop->MaLop}}</td>
                                         <td>{{$lop->TenLop}}</td>
                                         <td>{{$lop->SoLuongSV}}</td>
                                         <td>{{ ($lop->GiangVien->HoTen) }}
-                                        <th class="text-center"><a href="giang-vien/quan-ly-lop/sua/{{$lop->id}}">Sửa</a> | <a onclick="return XacNhanXoa('Bạn có chắc muốn xóa?')" href="giang-vien/quan-ly-lop/xoa/{{$lop->id}}">Xóa</a></th>
+                                        <th class="text-center"><a href="giang-vien/quan-ly-lop/sua/{{$lop->MaLop}}">Sửa</a> | <a onclick="return XacNhanXoa('Bạn có chắc muốn xóa?')" href="giang-vien/quan-ly-lop/xoa/{{$lop->MaLop}}">Xóa</a></th>
                                     </tr>
                                     <?php $stt++; ?>
                                     @endforeach

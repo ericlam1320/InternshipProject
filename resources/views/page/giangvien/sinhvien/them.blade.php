@@ -11,7 +11,7 @@
 
   <div class="row pad-botm">
     <div class="col-md-12">
-      <h4 class="header-line">Cập nhật Lớp Học</h4>
+      <h4 class="header-line">Quản Lý Sinh Viên</h4>
     </div>
   </div>
 
@@ -55,38 +55,67 @@
   <div class="col-md-6 col-sm-6 col-xs-12">
    <div class="panel panel-info">
     <div class="panel-heading">
-      Form cập nhật
+      Form Thêm Sinh Viên
         @if(count($errors) > 0)                       
             <div class="alert alert-danger">@foreach($errors->all() as $err){{$err}}<br>@endforeach</div>
         @endif
    </div>
    <div class="panel-body" >
-    <form role="form" method="POST" action="giang-vien/quan-ly-lop/sua/{{$lop->MaLop}}">
+    <form role="form" method="POST" action="giang-vien/quan-ly-sinh-vien/them">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group">
-        <label>Mã Lớp</label>
-        <input class="form-control" type="text" name="malop" value="{{$lop->MaLop}}" readonly="false" />
+        <label>Mã SV</label>
+        <input class="form-control" type="text" name="masv" />
         <p class="help-block"></p>
       </div>
+
       <div class="form-group">
-        <label>Tên lớp</label>
-        <input class="form-control" type="text" name="tenlop" value="{{$lop->TenLop}}" />
+        <label>Tên SV</label>
+        <input class="form-control" type="text" name="tensv" />
         <p class="help-block"></p>
       </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="control-label">Ngày sinh</label>
+            <input type="date" class="form-control date" placeholder="Ngày sinh"  name="ngaysinh" value="<?= date('Y-m-d') ?>">
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="control-label">Giới tính</label><br>
+            <label class=""><input type="radio" name="gioitinh" value=" Nam" checked> Nam</label>
+            <label class=""><input type="radio" name="gioitinh" value=" Nữ"> Nữ</label>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label>Chọn Lớp</label>
+            <select class="form-control" name="lophoc">
+                @foreach($lophoc as $lop)
+                <option value="{{$lop->MaLop}}">{{$lop->TenLop}}</option>
+                @endforeach
+            </select>
+          </div>
+        </div>
+      </div>
+
       <div class="form-group">
-        <label>Số lượng sinh viên</label>
-        <input class="form-control" type="text" name="soluongsv" value="{{$lop->SoLuongSV}}" />
+        <label>Email</label>
+        <input class="form-control" type="text" name="email" />
         <p class="help-block"></p>
       </div>
+
       <div class="form-group">
-        <label>Chọn giảng viên</label>
-        <select class="form-control" name="giangvien">
-            @foreach($giangvien as $gv)
-            <option @if($gv->id == $lop->MaGV) {{ 'selected' }} @endif value="{{$gv->id}}"> {{$gv->HoTen}}</option>
-            @endforeach
-        </select>
+        <label>Địa chỉ</label>
+        <input class="form-control" type="text" name="diachi" />
+        <p class="help-block"></p>
       </div>
-      <button type="submit" class="btn btn-info">Cập nhật</button>
+
+      <button type="submit" class="btn btn-info">Thêm</button>
 
     </form>
   </div>

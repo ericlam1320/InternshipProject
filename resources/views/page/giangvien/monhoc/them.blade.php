@@ -2,7 +2,7 @@
 
 @section('menu-quanly','menu-top-active')
 
-@section ('title','Quản Lý')
+@section ('title','Thêm Môn Học')
 
 @section('content')
 
@@ -11,7 +11,7 @@
 
   <div class="row pad-botm">
     <div class="col-md-12">
-      <h4 class="header-line">Cập nhật Lớp Học</h4>
+      <h4 class="header-line">Quản Lý Môn Học</h4>
     </div>
   </div>
 
@@ -49,44 +49,40 @@
             </div>
 
 
-                        
 
   </div>              
   <div class="col-md-6 col-sm-6 col-xs-12">
    <div class="panel panel-info">
     <div class="panel-heading">
-      Form cập nhật
-        @if(count($errors) > 0)                       
-            <div class="alert alert-danger">@foreach($errors->all() as $err){{$err}}<br>@endforeach</div>
-        @endif
+      Form Thêm Môn Học
+      @if(count($errors) > 0)                       
+        <div class="alert alert-danger">@foreach($errors->all() as $err){{$err}}<br>@endforeach</div>
+      @endif
    </div>
-   <div class="panel-body" >
-    <form role="form" method="POST" action="giang-vien/quan-ly-lop/sua/{{$lop->MaLop}}">
+   <div class="panel-body">
+    <form role="form" method="POST" action="giang-vien/quan-ly-mon-hoc/them">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group">
-        <label>Mã Lớp</label>
-        <input class="form-control" type="text" name="malop" value="{{$lop->MaLop}}" readonly="false" />
+        <label>Mã Môn Học</label>
+        <input class="form-control" type="text" name="mamon" />
         <p class="help-block"></p>
       </div>
       <div class="form-group">
-        <label>Tên lớp</label>
-        <input class="form-control" type="text" name="tenlop" value="{{$lop->TenLop}}" />
+        <label>Tên Môn Học</label>
+        <input class="form-control" type="text" name="tenmon" />
         <p class="help-block"></p>
       </div>
       <div class="form-group">
-        <label>Số lượng sinh viên</label>
-        <input class="form-control" type="text" name="soluongsv" value="{{$lop->SoLuongSV}}" />
+        <label>Học Kỳ</label>
+        <input class="form-control" type="text" name="hocky" />
         <p class="help-block"></p>
       </div>
       <div class="form-group">
-        <label>Chọn giảng viên</label>
-        <select class="form-control" name="giangvien">
-            @foreach($giangvien as $gv)
-            <option @if($gv->id == $lop->MaGV) {{ 'selected' }} @endif value="{{$gv->id}}"> {{$gv->HoTen}}</option>
-            @endforeach
-        </select>
+        <label>Số Tín Chỉ</label>
+        <input class="form-control" type="text" name="sotinchi" />
+        <p class="help-block"></p>
       </div>
-      <button type="submit" class="btn btn-info">Cập nhật</button>
+      <button type="submit" class="btn btn-info">Thêm</button>
 
     </form>
   </div>
@@ -98,7 +94,7 @@
                     <div class="panel panel-default">
                        
                         <div class="panel-heading">
-                            Yêu cầu gần đây
+                            Danh sách môn học
                         </div>
                         
                         <div class="panel-body">
@@ -107,9 +103,9 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Tên Lớp</th>
-                                            <th>Số lượng SV</th>
-                                            <th>Tên GV</th>
+                                            <th>Tên</th>
+                                            <th>Mã Số</th>
+                                            <th>Trạng thái</th>
                                         </tr>
                                     </thead>
                                     <tbody>

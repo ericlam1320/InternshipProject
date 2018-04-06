@@ -8,4 +8,5 @@ class MonHoc extends Model
 {
     protected $table = 'monhoc';
     public $timestamps = false;
+    public $primaryKey = 'MaMon';
 }

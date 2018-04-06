@@ -9,6 +9,8 @@ class LopHoc extends Model
     protected $table = 'lophoc';
     public $timestamps = false;
 
+    public $primaryKey = 'MaLop';
+
     public function GiangVien(){
     	return $this->belongsTo('App\GiangVien', 'MaGV', 'id');
     }

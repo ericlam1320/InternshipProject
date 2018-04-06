@@ -11,7 +11,7 @@
 
   <div class="row pad-botm">
     <div class="col-md-12">
-      <h4 class="header-line">Thêm Lớp Học</h4>
+      <h4 class="header-line">Quản Lý Lớp Học</h4>
     </div>
   </div>
 
@@ -55,7 +55,7 @@
   <div class="col-md-6 col-sm-6 col-xs-12">
    <div class="panel panel-info">
     <div class="panel-heading">
-      Form Thêm Lớp
+      Form Thêm Lớp Học
         @if(count($errors) > 0)                       
             <div class="alert alert-danger">@foreach($errors->all() as $err){{$err}}<br>@endforeach</div>
         @endif
@@ -64,8 +64,8 @@
     <form role="form" method="POST" action="giang-vien/quan-ly-lop/them">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group">
-        <label>ID lớp</label>
-        <input class="form-control" type="text" name="idlop" />
+        <label>Mã lớp</label>
+        <input class="form-control" type="text" name="malop" />
         <p class="help-block"></p>
       </div>
       <div class="form-group">
