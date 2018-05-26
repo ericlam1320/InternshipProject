@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use App\SinhVien;
+use App\GiangVien;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -25,14 +27,14 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Gate::define('giang_vien', function($user){
-            if($user->type === 1){
+        Gate::forUser('giangvien')->define('giang_vien', function($user){
+            if($user->type == 1){
                 return true;
             }
         });
 
-        Gate::define('sinh_vien', function($user){
-           if($user->type === 2){
+        Gate::forUser('sinhvien')->define('sinh_vien', function($user){
+           if($user->type == 2){
                 return true;
             }
         });

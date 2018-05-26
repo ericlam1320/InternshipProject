@@ -40,10 +40,27 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
+        ],
+
+        'sinhvien' => [
+            'driver' => 'session',
+            'provider' => 'sinhvien',
+        ],
+        'sinhvien-api' => [
+            'driver' => 'token',
+            'provider' => 'sinhvien',
+        ],
+
+        'giangvien' => [
+            'driver' => 'session',
+            'provider' => 'giangvien',
+        ],
+         'giangvien-api' => [
+            'driver' => 'token',
+            'provider' => 'giangvien',
         ],
     ],
 
@@ -70,6 +87,16 @@ return [
             'model' => App\User::class,
         ],
 
+        'sinhvien' => [
+            'driver' => 'eloquent',
+            'model' => App\SinhVien::class,
+        ],
+
+        'giangvien' => [
+            'driver' => 'eloquent',
+            'model' => App\GiangVien::class,
+        ],
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -94,6 +121,18 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+
+        'sinhvien' => [
+            'provider' => 'sinhvien',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+
+        'giangvien' => [
+            'provider' => 'giangvien',
             'table' => 'password_resets',
             'expire' => 60,
         ],

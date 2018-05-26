@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.master_giangvien')
 
 @section('menu-quanly','menu-top-active')
 
@@ -61,7 +61,7 @@
         @endif
    </div>
    <div class="panel-body" >
-    <form role="form" method="POST" action="giang-vien/quan-ly-sinh-vien/them">
+    <form role="form" method="POST" action="giang-vien/quan-ly-sinh-vien/sua/{{ $sinhvien->id }}">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group">
         <label>Mã SV</label>
@@ -86,8 +86,8 @@
         <div class="col-md-4">
           <div class="form-group">
             <label class="control-label">Giới tính</label><br>
-            <label class=""><input type="radio" name="gioitinh" value=" Nam" checked @if($sinhvien->GioiTinh == '1') {{ 'checked' }} @endif> Nam</label>
-            <label class=""><input type="radio" name="gioitinh" value=" Nữ" @if($sinhvien->GioiTinh == '0') {{ 'checked' }} @endif> Nữ</label>
+            <label class=""><input type="radio" name="gioitinh" value=" 1" checked @if($sinhvien->GioiTinh == '1') {{ 'checked' }} @endif> Nam</label>
+            <label class=""><input type="radio" name="gioitinh" value=" 0" @if($sinhvien->GioiTinh == '0') {{ 'checked' }} @endif> Nữ</label>
           </div>
         </div>
 

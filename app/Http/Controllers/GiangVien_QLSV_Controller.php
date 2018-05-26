@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Hash;
 use App\SinhVien;
 use App\LopHoc;
 
@@ -10,18 +11,18 @@ class GiangVien_QLSV_Controller extends Controller
 {
     public function getDanhSach(){
         $sinhvien = SinhVien::with('LopHoc')->orderBy('MaLop', 'DESC')->get();
-        return view('page.giangvien.sinhvien.danhsach',compact('sinhvien'));
+        return view('page.giangvien.sinhvien.danhsach', compact('sinhvien'));
     }
 
-    public function getThem(){
+     public function getThem(){
         $lophoc = LopHoc::all();
         return view('page.giangvien.sinhvien.them',compact('lophoc'));
     }
     public function postThem(Request $request){
         $this->validate($request,[
-            'masv' => 'required | unique:sinhvien, id',
-            'tensv' => 'required | unique:sinhvien, HoTen', 
-            'email' => 'required | email | unique:sinhvien, email',
+            'masv' => 'required| unique:sinhvien,id',
+            'tensv' => 'required | unique:sinhvien,HoTen', 
+            'email' => 'required | email | unique:sinhvien,email',
             'diachi' => 'required'
         ],
         [
@@ -34,9 +35,9 @@ class GiangVien_QLSV_Controller extends Controller
             'email.unique' => 'Email sinh viên đã tồn tại',
             'diachi.required' => 'Không được để trống Địa Chỉ'
         ]);
-
         $sinhvien = new SinhVien;
         $sinhvien->id = $request->masv;
+        $sinhvien->password = Hash::make($request->masv);
         $sinhvien->HoTen = $request->tensv;
         $sinhvien->NgaySinh = $request->ngaysinh;
         $sinhvien->GioiTinh = $request->gioitinh;
@@ -83,6 +84,6 @@ class GiangVien_QLSV_Controller extends Controller
         $sinhvien->DiaChi = $request->diachi;
 
         $sinhvien->save();
-        return redirect('giang-vien/quan-ly-sinh-vien/danh-sach')->with('success','Thêm sinh viên thành công.');
+        return redirect('giang-vien/quan-ly-sinh-vien/danh-sach')->with('success','Cập nhật sinh viên thành công.');
     }
 }

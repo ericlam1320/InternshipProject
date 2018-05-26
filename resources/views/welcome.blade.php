@@ -15,7 +15,7 @@
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Arial', sans-serif;
                 font-weight: bold;
                 height: 100vh;
                 margin: 0;
@@ -54,9 +54,20 @@
 
             .title {
                 font-size: 84px;
+                text-shadow: 5px 5px 5px gray,0 0 5px lightblue;;
             }
 
             .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-shadow: 1px 1px 3px gray;  
+            }           
+            .links-menu > a {
                 color: #636b6f;
                 padding: 0 25px;
                 font-size: 12px;
@@ -65,7 +76,6 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -76,12 +86,11 @@
 
             <div class="menu">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right links-menu">
                     @auth
                         <a href="{{ url('/home') }}">Trang chủ</a>
                     @else
                         <a href="{{ route('login') }}">Đăng nhập</a>
-                        <a href="{{ route('register') }}">Đăng ký</a>
                     @endauth
                 </div>
             @endif

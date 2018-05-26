@@ -1,12 +1,10 @@
-@extends('layout.master')
+@extends('layout.master_giangvien')
 
 @section ('title','Quản Lý Môn Học')
 
 @section('menu-quanly', 'menu-top-active')
 
 @section('content')
-
-@can('giang_vien')
 
 <div class="content-wrapper">
  <div class="container">
@@ -70,6 +68,12 @@
                                 {{ session('success') }}
                             </div>
                         @endif
+
+                        @if(session('error'))
+                            <div class="alert alert-danger">
+                                {{ session('error') }}
+                            </div>
+                        @endif
                     </div>
                     <div class="panel-body">
                         <div class="table-responsive">
@@ -109,7 +113,6 @@
         </div>                     
     </div>
 </div>
-@endcan
 
 @endsection
 

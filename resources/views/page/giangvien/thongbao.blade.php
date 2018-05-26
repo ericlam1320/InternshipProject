@@ -1,8 +1,8 @@
-@extends('layout.master')
+﻿@extends('layout.master_giangvien')
 
-@section('menu-thongbao','menu-top-active')
+@section ('title','Trang chủ')
 
-@section ('title','Thông báo')
+@section('menu-thongbao', 'menu-top-active')
 
 @section('content')
 
@@ -11,7 +11,7 @@
 
   <div class="row pad-botm">
     <div class="col-md-12">
-      <h4 class="header-line">Thông Báo</h4>
+      <h4 class="header-line">Giảng Viên</h4>
     </div>
   </div>
 
@@ -47,101 +47,167 @@
                 Số nhóm phụ trách
               </div>
             </div>
-</div>            
-
-            <div class="row">
-                
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="panel panel-info">
-
-                        <div class="panel-heading">
-                          Form Thông báo
-                        </div>
-
-                        <div class="panel-body">
-                            <form role="form">
-                                <div class="form-group">
-                                    <label>Họ & Tên</label>
-                                    <input class="form-control" type="text" />
-                                    <p class="help-block"></p>
-                                </div>
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input class="form-control" type="text" />
-                                    <p class="help-block"></p>
-                                </div>
-                                <div class="form-group">
-                                    <label>Nội dung</label>
-                                    <textarea class="form-control" rows="3"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label>Chọn nhóm</label>
-                                    <select class="form-control">
-                                        <option>Nhóm 1</option>
-                                        <option>Nhóm 2</option>
-                                        <option>Nhóm 3</option>
-                                        <option>Nhóm 4</option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="btn btn-info">Gửi thông báo</button>
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Thông báo gần đây
-                        </div>
-                        <div class="panel-body">
-                            <div class="panel-group" id="accordion">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">Thông báo 1</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
-                                        <div class="panel-body">
-                                            Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Thông báo 2</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseTwo" class="panel-collapse in" style="height: auto;">
-                                        <div class="panel-body">
-                                            Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">Thông báo 3</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapseThree" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-
-
-
 </div>
+
+
+
+
+
+
+   <div class="col-md-4 col-sm-4 col-xs-12" >
+    <div class="alert alert-success text-center">
+      <h3>Thông báo Nhóm</h3> 
+      <i class="fa fa-envelope fa-4x"></i>
+      <hr />
+      <p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn.
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn.
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn.
+       Lorem ipsum dolor sit amet.
+     </p>
+     <hr />
+     <a href="#" class="btn btn-success">Xem chi tiết</a> 
+   </div>
+ </div>
+
+
+
+
+
+<div class="col-md-8 col-sm-8 col-xs-12">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+     DANH SÁCH NHÓM PHỤ TRÁCH
+   </div>
+   <div class="panel-body">
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>User No.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>100090</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>100090</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>100090</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>100090</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>100090</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>100090</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>100090</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>
+</div>
+
+
+<div class="row">
+   
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+       Yêu cầu Sinh Viên
+      </div>
+      <div class="panel-body">
+        <ul class="media-list">
+          
+          <li class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object img-circle img-comments" src="assets/img/user.gif" />
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">Lorem ipsum dolor sit amet</h4>
+              <p>
+                Donec sit amet ligula enim. Duis vel condimentum massa.
+                Maecenas eget congue dui
+                interdum nibh et, volutpat dolor.
+              </p>
+            </div>
+          </li>
+           
+          <li class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object img-circle img-comments" src="assets/img/user.gif" />
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">Lorem ipsum dolor sit amet</h4>
+              <p>
+                Donec sit amet ligula enim. Duis vel condimentum massa.
+                Maecenas eget congue dui
+                interdum nibh et, volutpat dolor.
+              </p>
+            </div>
+          </li>
+
+          <li class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object img-circle img-comments" src="assets/img/user.gif" />
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">Lorem ipsum dolor sit amet</h4>
+              <p>
+                Donec sit amet ligula enim. Duis vel condimentum massa.
+                Maecenas eget congue dui
+                interdum nibh et, volutpat dolor.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 </div>
 </div>

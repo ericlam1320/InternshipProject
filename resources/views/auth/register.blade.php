@@ -7,6 +7,10 @@
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
+                @if(session('Success'))
+                    <div class="alert alert-success">{{ session('Success') }}</div>
+                @endif
+
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
@@ -57,7 +61,13 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                <input id="password-confirm" type="password" class="form-control{{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}" name="password_confirmation" required>
+
+                                 @if ($errors->has('password_confirmation'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 

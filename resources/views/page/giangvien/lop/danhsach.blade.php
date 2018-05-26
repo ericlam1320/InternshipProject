@@ -1,12 +1,10 @@
-@extends('layout.master')
+@extends('layout.master_giangvien')
 
 @section ('title','Quản Lý Lớp')
 
 @section('menu-quanly', 'menu-top-active')
 
 @section('content')
-
-@can('giang_vien')
 
 <div class="content-wrapper">
  <div class="container">
@@ -109,7 +107,6 @@
         </div>                     
     </div>
 </div>
-@endcan
 
 @endsection
 

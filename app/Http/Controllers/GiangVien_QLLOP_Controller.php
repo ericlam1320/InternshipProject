@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 use App\LopHoc;
 use App\GiangVien;
 
-
-class GiangVien_QLLop_Controller extends Controller
+class GiangVien_QLLOP_Controller extends Controller
 {
     public function getDanhSach(){
         $lophoc = LopHoc::with('GiangVien')->orderBy('MaLop', 'DESC')->get();
@@ -45,6 +44,7 @@ class GiangVien_QLLop_Controller extends Controller
     }
 
     public function getXoa($id){
+        
         $lop = LopHoc::where('MaLop', $id)->delete();
         return redirect('giang-vien/quan-ly-lop/danh-sach')->with('success','Xoá lớp học thành công.');
     }

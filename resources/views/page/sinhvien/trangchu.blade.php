@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.master_sinhvien')
 
 @section ('title','Trang chủ')
 
@@ -6,7 +6,6 @@
 
 @section('content')
 
-@can('sinh_vien')
 <div class="content-wrapper">
  <div class="container">
 
@@ -20,14 +19,14 @@
    <div class="col-md-3 col-sm-3 col-xs-6">
     <div class="alert alert-info back-widget-set text-center">
       <i class="fa fa-user fa-5x"></i>
-      <h3>Vương Anh Kho</h3>
+      <h3>{{ Auth::guard('sinhvien')->user()->HoTen }}</h3>
     </div>
   </div>
 
   <div class="col-md-3 col-sm-3 col-xs-6">
     <div class="alert alert-success back-widget-set text-center">
       <i class="fa fa-bookmark fa-5x"></i>
-      <h3>DH51400553</h3>
+      <h3>{{ Auth::guard('sinhvien')->user()->MaLop }}</h3>
     </div>
   </div>
 
@@ -124,7 +123,7 @@
  <div class="col-md-8 col-sm-8 col-xs-12">
   <div class="panel panel-success">
     <div class="panel-heading">
-     DANH SÁCH NHÓM THAM GIA
+     DANH SÁCH CÁC MÔN HỌC ĐĂNG KÝ
     </div>
    <div class="panel-body">
     <div class="table-responsive">
@@ -132,10 +131,10 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
-            <th>User No.</th>
+            <th>Tên Môn</th>
+            <th>Học Kỳ</th>
+            <th>Số Tín Chỉ</th>
+            <th>Nhóm</th>
           </tr>
         </thead>
         <tbody>
@@ -206,7 +205,4 @@
 
 </div>
 </div>
-
-@endcan
-
 @endsection

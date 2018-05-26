@@ -38,7 +38,7 @@ class SinhVienController extends Controller
     	return view('page.sinhvien.thaoluan');
     }
 
-    public function getChiTietThaoLuan(){
+    public function getChiTietThaoLuan($id){
         return view('page.sinhvien.chitietthaoluan');
     }
 }

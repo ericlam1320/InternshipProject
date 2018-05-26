@@ -1,4 +1,4 @@
-@extends('layout.master')
+﻿@extends('layout.master_giangvien')
 
 @section ('title','Trang chủ')
 
@@ -6,7 +6,6 @@
 
 @section('content')
 
-@can('giang_vien')
 <div class="content-wrapper">
  <div class="container">
 
@@ -20,7 +19,7 @@
              <div class="col-md-3 col-sm-3 col-xs-6">
               <div class="alert alert-info back-widget-set text-center">
                 <i class="fa fa-user fa-5x"></i>
-                <h3>Bùi Nhật Bằng</h3>
+                <h3>{{ Auth::guard('giangvien')->user()->HoTen }}</h3>
                 Họ & tên
               </div>
             </div>
@@ -149,14 +148,14 @@
 <div class="row">
    
   <div class="col-md-12 col-sm-12 col-xs-12">
-    <div class="panel panel-warning">
-      <div class="panel-heading">
+    <div class="panel panel-info">
+      <div class="panel-heading ">
        Yêu cầu Sinh Viên
       </div>
       <div class="panel-body">
         <ul class="media-list">
           
-          <li class="media">
+          <li class="media alert alert-warning">
             <a class="pull-left" href="#">
               <img class="media-object img-circle img-comments" src="assets/img/user.gif" />
             </a>
@@ -170,7 +169,7 @@
             </div>
           </li>
            
-          <li class="media">
+          <li class="media alert alert-success">
             <a class="pull-left" href="#">
               <img class="media-object img-circle img-comments" src="assets/img/user.gif" />
             </a>
@@ -184,7 +183,7 @@
             </div>
           </li>
 
-          <li class="media">
+          <li class="media alert alert-danger">
             <a class="pull-left" href="#">
               <img class="media-object img-circle img-comments" src="assets/img/user.gif" />
             </a>
@@ -210,7 +209,5 @@
 </div>
 
 
-
-@endcan
-
 @endsection
+

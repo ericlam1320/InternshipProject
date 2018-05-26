@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.master_sinhvien')
 
 @section('menu-thongbao','menu-top-active')
 
@@ -55,14 +55,31 @@
                         </div>
                         <div class="panel-body">
                             <div class="panel-group" id="accordion">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">Thông báo 1</a>
+                                <div class="panel panel-default ">
+                                    <div class="alert-danger">
+                                        <h4 class="panel-title alert alert-danger ">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed ">Thông báo 1</a>
+    
                                         </h4>
+                                        
                                     </div>
                                     <div id="collapseOne" class="panel-collapse collapse" style="height: 0px;">
+                                            <div class="progress">
+                                                    <div class="progress-bar progress-bar-success" style="width: 33.3333333%">
+                                                      <span class="">Tên Giảng Viên: </span>
+                                                      <span class="">ÂSÂS</span>
+                                                    </div>
+                                                    <div class="progress-bar progress-bar-warning" style="width: 33.3333333%">
+                                                      <span class="">Tên Môn: </span>
+                                                      <span class="">Hóa </span>
+                                                    </div>
+                                                    <div class="progress-bar progress-bar-info" style="width: 33.3333333%">
+                                                      <span class="">Ngày: </span>
+                                                      <span class="">12/2/2014 </span>
+                                                    </div>
+                                                  </div>
                                         <div class="panel-body">
+        
                                             Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh
                                         </div>
                                     </div>
@@ -74,6 +91,20 @@
                                         </h4>
                                     </div>
                                     <div id="collapseTwo" class="panel-collapse in" style="height: auto;">
+                                            <div class="progress">
+                                                    <div class="progress-bar progress-bar-success" style="width: 33.3333333%">
+                                                      <span class="">Tên Giảng Viên: </span>
+                                                      <span class="">ÂSÂS</span>
+                                                    </div>
+                                                    <div class="progress-bar progress-bar-warning" style="width: 33.3333333%">
+                                                      <span class="">Tên Môn: </span>
+                                                      <span class="">Hóa </span>
+                                                    </div>
+                                                    <div class="progress-bar progress-bar-info" style="width: 33.3333333%">
+                                                      <span class="">Ngày: </span>
+                                                      <span class="">12/2/2014 </span>
+                                                    </div>
+                                                  </div>
                                         <div class="panel-body">
                                             Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh
                                         </div>
@@ -86,6 +117,20 @@
                                         </h4>
                                     </div>
                                     <div id="collapseThree" class="panel-collapse collapse">
+                                            <div class="progress">
+                                                    <div class="progress-bar progress-bar-success" style="width: 33.3333333%">
+                                                      <span class="">Tên Giảng Viên: </span>
+                                                      <span class="">ÂSÂS</span>
+                                                    </div>
+                                                    <div class="progress-bar progress-bar-warning" style="width: 33.3333333%">
+                                                      <span class="">Tên Môn: </span>
+                                                      <span class="">Hóa </span>
+                                                    </div>
+                                                    <div class="progress-bar progress-bar-info" style="width: 33.3333333%">
+                                                      <span class="">Ngày: </span>
+                                                      <span class="">12/2/2014 </span>
+                                                    </div>
+                                                  </div>
                                         <div class="panel-body">
                                             Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh Thực tập tốt nghiệp Thi Trường Minh Vương Anh Khoa Nguyễn Chung Tú Thái Kim Thanh Huỳnh Trí Minh
                                         </div>

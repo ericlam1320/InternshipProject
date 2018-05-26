@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.master_giangvien')
 
 @section('menu-yeucau','menu-top-active')
 
@@ -60,12 +60,12 @@
     <form role="form">
       <div class="form-group">
         <label>Họ & Tên</label>
-        <input class="form-control" type="text" />
+        <input class="form-control" type="text" disabled value="Value"/>
         <p class="help-block"></p>
       </div>
       <div class="form-group">
         <label>Email</label>
-        <input class="form-control" type="text" />
+        <input class="form-control" type="text" disabled value="Value"/>
         <p class="help-block"></p>
       </div>
       <div class="form-group">

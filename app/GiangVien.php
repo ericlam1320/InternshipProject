@@ -1,15 +1,19 @@
 <?php
-
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class GiangVien extends Model
+class GiangVien extends Authenticatable
 {
-    protected $table = 'giangvien';
-    public $timestamps = false;
+	use Notifiable;
+	protected $guard = 'giangvien';
+	protected $table = 'giangvien';
+	public $incrementing = false;
+	
+	public $timestamps = false;
 
-    public function LopHoc(){
+	public function LopHoc(){
     	return $this->hasMany('App\LopHoc', 'MaGV', 'id');
     }
 }

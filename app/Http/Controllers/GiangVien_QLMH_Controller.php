@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\MonHoc;
-
+use App\ChiTietNhom;
 class GiangVien_QLMH_Controller extends Controller
 {
-    public function getDanhSach(){
+   public function getDanhSach(){
         $monhoc = MonHoc::all();
         return view('page.giangvien.monhoc.danhsach', compact('monhoc'));
     }
@@ -44,8 +44,27 @@ class GiangVien_QLMH_Controller extends Controller
     }
 
     public function getXoa($id){
-        $monhoc = MonHoc::where('MaMon', $id)->delete();
-        return redirect('giang-vien/quan-ly-mon-hoc/danh-sach')->with('success','Xoá môn học thành công.');
+        $mon = MonHoc::where('MaMon', $id)->first();
+        $mon_id = $mon->MaMon; 
+
+        $nhom = ChiTietNhom::where('MaMon', $id)->first();
+
+        if($nhom == null){
+            $monhoc = MonHoc::where('MaMon', $id)->delete();        
+            return redirect('giang-vien/quan-ly-mon-hoc/danh-sach')->with('success','Xoá môn học thành công.');
+        }
+            
+
+        else {
+            $nhom_id = $nhom->MaMon;
+            if($mon_id == $nhom_id){
+                return redirect('giang-vien/quan-ly-mon-hoc/danh-sach')->with('error','Không thể xoá môn học');
+            }
+        }
+
+        
+
+        
     }
 
     public function getSua($id){

@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layout.master_giangvien')
 
 @section('menu-thaoluan','menu-top-active')
 
